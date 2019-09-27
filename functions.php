@@ -19,4 +19,10 @@ function output_projects($order_column, $amount, $type_of_display) {
         }
     }
 }
+
+function output_single_project($id) {
+    require_once($_SERVER["DOCUMENT_ROOT"]."/db.php");
+    
+    print_r($conn->query("SELECT * FROM `projects` WHERE ID=$id"));
+}
 ?>
