@@ -15,7 +15,7 @@ function output_projects($order_column, $amount, $type_of_display) {
                         </div>
                     </div><img class="img-fluid" src=<?php echo "'". $row->image_url ."'";?> /></a>
             </div>
-            <?
+            <?php
         }
     }
 }
