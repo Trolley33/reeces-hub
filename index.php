@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>Home - Reece's Hub</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,7 +16,7 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"]."/functions.php");
 ?>
-    
+
 <body id="page-top">
     <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background-color: #333333;">
         <div class="container"><a class="navbar-brand" href="#" style="color: #dde4eb;font-size: 26px;">Reece's Hub</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -30,7 +30,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/functions.php");
         </div>
         </div>
     </nav>
-    <header class="d-flex masthead" style="background-image: url(&quot;assets/img/Screenshot%20from%202019-09-27%2013-20-32.png&quot;);background-size: cover;background-repeat: no-repeat;">
+    <header class="d-flex masthead" style="background-image: url(&quot;assets/img/homescreen-background.png&quot;);background-size: cover;background-repeat: no-repeat;">
         <div class="container my-auto text-center">
             <h1 class="mb-1" style="color: rgb(221,228,235);">Reece Trolley</h1>
             <h3 class="mb-5"><em style="color: #dde4eb;">Aspiring Programmer</em></h3><a class="btn btn-xl js-scroll-trigger" role="button" data-bs-hover-animate="pulse" href="#section1" style="background-color: #c35196;color: #dde4eb;">Show me more</a>
@@ -55,7 +55,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/functions.php");
             <div class="row no-gutters">
                 <?php
                 output_projects('created_at', 4, 'box');
-                
+
                 ?>
             </div>
         </div>
