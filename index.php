@@ -18,18 +18,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/functions.php");
 ?>
 
 <body id="page-top">
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background-color: #333333;">
-        <div class="container"><a class="navbar-brand" href="#" style="color: #dde4eb;font-size: 26px;">Reece's Hub</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link text-white-50" href="#">Projects</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link text-white-50" href="#">About</a></li>
-                </ul>
-        </div>
-        </div>
-    </nav>
+    <?php output_nav_bar("Home"); ?>
     <header class="d-flex masthead" style="background-image: url(&quot;assets/img/homescreen-background.png&quot;);background-size: cover;background-repeat: no-repeat;">
         <div class="container my-auto text-center">
             <h1 class="mb-1" style="color: rgb(221,228,235);">Reece Trolley</h1>
