@@ -6,7 +6,10 @@
       dark
       clipped-right
     >
-      <div class="d-flex align-center main-logo pa-1">
+      <div 
+        class="d-flex align-center main-logo pa-1"
+        @click="redirectTo('/')"
+      >
         <v-img
           alt="Main Logo"
           class="shrink mr-2"
@@ -20,44 +23,58 @@
       </div>
 
       <v-spacer></v-spacer>
-      <v-menu offset-y>
+      <v-menu offset-y
+        v-for="(menuitem, index) in menus"
+        :key="index"
+      >
         <template v-slot:activator="{ on }">
           <v-btn text v-on="on">
-            Projects
+            {{ menuitem.text }}
           </v-btn>
         </template>
 
         <v-list>
           <v-list-item
-            v-for="(item, index) in ['Reece\'s Hub', 'Cook-book.co.uk']"
-            :key="index"
-            @click="console.log('clicked' + item)"
+            v-for="(subitem, subitem_index) in menuitem.subitems"
+            :key="subitem_index"
+            @click="redirectTo(subitem.url)"
           >
-            <v-list-item-title>{{ item }}</v-list-item-title>
+            <v-list-item-title>{{ subitem.text }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
     </v-app-bar>
 
     <v-content>
-      <Homepage/>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import Homepage from './components/Homepage';
-
 export default {
   name: 'App',
 
-  components: {
-    Homepage,
-  },
-
   data: () => ({
-    drawer: false
+    menus: [
+      {
+        text: "Projects",
+        subitems: [
+          {text: "Reece's Hub", url: "/project/1"},
+          {text: "Cook-book.co.uk", url: "/project/2"},
+        ]
+      },
+      {
+
+      }
+    ]
   }),
+
+  methods: {
+    redirectTo(url) {
+      window.location.href = url;
+    }
+  }
 };
 </script>
 
