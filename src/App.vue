@@ -6,9 +6,10 @@
       dark
       clipped-right
     >
-      <div 
+      <router-link
+        :to="{path: '/'}"
+        tag="div"
         class="d-flex align-center main-logo pa-1"
-        @click="redirectTo('/')"
       >
         <v-img
           alt="Main Logo"
@@ -20,7 +21,7 @@
         />
 
         <span class="headline mr-2 white--text" >Reece's Hub</span>
-      </div>
+      </router-link>
 
       <v-spacer></v-spacer>
       <v-menu offset-y
@@ -37,7 +38,7 @@
           <v-list-item
             v-for="(subitem, subitem_index) in menuitem.subitems"
             :key="subitem_index"
-            @click="redirectTo(subitem.url)"
+            @click="$router.push({path: subitem.url})"
           >
             <v-list-item-title>{{ subitem.text }}</v-list-item-title>
           </v-list-item>
@@ -71,9 +72,6 @@ export default {
   }),
 
   methods: {
-    redirectTo(url) {
-      window.location.href = url;
-    }
   }
 };
 </script>
@@ -85,8 +83,11 @@ export default {
 }
 
 .main-logo:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  
+  background-color: rgba(255, 255, 255, 0.2); 
+}
+
+router-link {
+  cursor: pointer;
 }
 
 </style>

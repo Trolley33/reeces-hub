@@ -6,6 +6,8 @@ import VueTimeLine from '@growthbunker/vuetimeline';
 import App from './App';
 import Homepage from './components/Homepage';
 
+import Error404 from './components/errors/404.vue';
+
 Vue.config.productionTip = false
 
 Vue.use(VueRouter);
@@ -13,7 +15,8 @@ Vue.use(VueTimeLine);
 
 const routes = [
   {path: '/', component: Homepage},
-  {path: '/project/:id', component: {template: "<div>Foo {{ $route.params.id}} </div>"}},
+  
+  {path: '*', component: Error404}
 ]
 
 
