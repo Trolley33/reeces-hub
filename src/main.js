@@ -5,6 +5,7 @@ import VueTimeLine from '@growthbunker/vuetimeline';
 
 import App from './App';
 import Homepage from './components/Homepage';
+import ProjectViewer from './components/projects/ProjectViewer';
 
 import Error404 from './components/errors/404.vue';
 
@@ -14,8 +15,9 @@ Vue.use(VueRouter);
 Vue.use(VueTimeLine);
 
 const routes = [
-  {path: '/', component: Homepage},
-  
+  {path: '/', name: 'home', component: Homepage},
+  {path: '/project/:id', name:'project-viewer', component: ProjectViewer},
+
   {path: '*', component: Error404}
 ]
 

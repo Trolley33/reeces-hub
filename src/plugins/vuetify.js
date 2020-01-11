@@ -9,7 +9,7 @@ export default new Vuetify({
     theme: {
         themes: {
             dark: {
-                primary: colors.pink
+                primary: colors.pink,
             }
         },
         dark: true
