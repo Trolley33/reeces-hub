@@ -25,7 +25,10 @@
         <v-card-title>
           Recent Projects
         </v-card-title>
-        <v-carousel>
+        <v-carousel
+          show-arrows
+          show-arrows-on-hover
+        >
           <v-carousel-item
             style="cursor:pointer;"
             v-for="(project, index) in recent_projects"
@@ -42,11 +45,119 @@
                 align="center"
                 justify="center"
               >
-                <div class="display-3 font-weight-medium text-uppercase">{{project.title}}</div>
+                <v-col
+                  cols="12"
+                  class="display-2 font-weight-medium text-uppercase text-center"
+                >
+                  {{project.title}}
+                </v-col>
               </v-row>
             </v-img>
           </v-carousel-item>
         </v-carousel>
+      </v-card>
+    </v-container>
+
+    <v-container>
+      <v-card 
+        dark
+        color="grey darken-4"
+      >
+        <v-card-title class="pink">
+          Education
+        </v-card-title>
+        <v-row
+          class="fill-height ma-1"
+        >
+          <v-col
+            cols="4"
+          >
+            <v-card
+              elevation="3"
+              dark
+              color="grey darken-3"
+              >
+              <v-card-title>
+                Loughborough University - Bsci Computer Science
+              </v-card-title>
+              <v-card-subtitle>
+                2017 - Present
+              </v-card-subtitle>
+              <v-card-text>
+                <p>
+                  Studying at Loughborough University was a very enjoyable experience. 
+                  It allowed me to further develop my programming skills by undertaking coursework and team projects, as well as learn the more theoretical side of Computer Science.
+                </p>
+              </v-card-text>
+            </v-card>
+          </v-col>
+          <v-col
+            cols="4"
+          >
+            <v-card
+              height="100%"
+              elevation="3"
+              dark
+              color="grey darken-3"
+              >
+              <v-card-title>
+                Outwood Post 16 Centre - A Levels
+              </v-card-title>
+              <v-card-subtitle>
+                2015 - 2017
+              </v-card-subtitle>
+              <v-card-text>
+                <p>
+                  It was shit.
+                </p>
+              </v-card-text>
+            </v-card>
+          </v-col>
+          <v-col
+            cols="4"
+          >
+            <v-card
+              elevation="3"
+              dark
+              color="grey darken-3"
+              >
+              <v-card-title>
+                Loughborough University - Bsci Computer Science
+              </v-card-title>
+              <v-card-subtitle>
+                2017 - Present
+              </v-card-subtitle>
+              <v-card-text>
+                <p>
+                  Studying at Loughborough University was a very enjoyable experience. 
+                  It allowed me to further develop my programming skills by undertaking coursework and team projects, as well as learn the more theoretical side of Computer Science.
+                </p>
+              </v-card-text>
+            </v-card>
+          </v-col>
+          <v-col
+            cols="4"
+          >
+            <v-card
+              elevation="3"
+              dark
+              color="grey darken-3"
+              >
+              <v-card-title>
+                Loughborough University - Bsci Computer Science
+              </v-card-title>
+              <v-card-subtitle>
+                2017 - Present
+              </v-card-subtitle>
+              <v-card-text>
+                <p>
+                  Studying at Loughborough University was a very enjoyable experience. 
+                  It allowed me to further develop my programming skills by undertaking coursework and team projects, as well as learn the more theoretical side of Computer Science.
+                </p>
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
       </v-card>
     </v-container>
   </div>
@@ -57,7 +168,8 @@ export default {
   props: ["recent_projects"],
 
   data() {
-    return {}
+    return {
+    }
   },
 }
 </script>
