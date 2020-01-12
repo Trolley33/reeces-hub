@@ -70,7 +70,12 @@
           class="fill-height ma-1"
         >
           <v-col
-            cols="4"
+            :cols="12"
+            :sm="12"
+            :md="6"
+            :xl="4"
+            v-for="(card, index) in education"
+            :key="index"
           >
             <v-card
               elevation="3"
@@ -78,81 +83,14 @@
               color="grey darken-3"
               >
               <v-card-title>
-                Loughborough University - Bsci Computer Science
+                {{ card.title }}
               </v-card-title>
               <v-card-subtitle>
-                2017 - Present
+                {{ card.subtitle }}
               </v-card-subtitle>
               <v-card-text>
                 <p>
-                  Studying at Loughborough University was a very enjoyable experience. 
-                  It allowed me to further develop my programming skills by undertaking coursework and team projects, as well as learn the more theoretical side of Computer Science.
-                </p>
-              </v-card-text>
-            </v-card>
-          </v-col>
-          <v-col
-            cols="4"
-          >
-            <v-card
-              height="100%"
-              elevation="3"
-              dark
-              color="grey darken-3"
-              >
-              <v-card-title>
-                Outwood Post 16 Centre - A Levels
-              </v-card-title>
-              <v-card-subtitle>
-                2015 - 2017
-              </v-card-subtitle>
-              <v-card-text>
-                <p>
-                  It was shit.
-                </p>
-              </v-card-text>
-            </v-card>
-          </v-col>
-          <v-col
-            cols="4"
-          >
-            <v-card
-              elevation="3"
-              dark
-              color="grey darken-3"
-              >
-              <v-card-title>
-                Loughborough University - Bsci Computer Science
-              </v-card-title>
-              <v-card-subtitle>
-                2017 - Present
-              </v-card-subtitle>
-              <v-card-text>
-                <p>
-                  Studying at Loughborough University was a very enjoyable experience. 
-                  It allowed me to further develop my programming skills by undertaking coursework and team projects, as well as learn the more theoretical side of Computer Science.
-                </p>
-              </v-card-text>
-            </v-card>
-          </v-col>
-          <v-col
-            cols="4"
-          >
-            <v-card
-              elevation="3"
-              dark
-              color="grey darken-3"
-              >
-              <v-card-title>
-                Loughborough University - Bsci Computer Science
-              </v-card-title>
-              <v-card-subtitle>
-                2017 - Present
-              </v-card-subtitle>
-              <v-card-text>
-                <p>
-                  Studying at Loughborough University was a very enjoyable experience. 
-                  It allowed me to further develop my programming skills by undertaking coursework and team projects, as well as learn the more theoretical side of Computer Science.
+                  {{ card.body }}
                 </p>
               </v-card-text>
             </v-card>
@@ -169,6 +107,28 @@ export default {
 
   data() {
     return {
+      education: [
+        {
+          title: "Loughborough University - Bsci Computer Science",
+          subtitle: "2017 - Present",
+          body: "Studying at Loughborough University was a very enjoyable experience. It allowed me to further develop my programming skills by undertaking coursework and team projects, as well as learn the more theoretical side of Computer Science."
+        },
+        {
+          title: "Outwood Post 16 Centre - A Levels",
+          subtitle: "2015 - 2017",
+          body: "Example text"
+        },
+        {
+          title: "Example 3",
+          subtitle: "Example",
+          body: "Example text"
+        },
+        {
+          title: "Example 4",
+          subtitle: "Example",
+          body: "Example text"
+        },
+      ]
     }
   },
 }
