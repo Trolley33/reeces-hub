@@ -78,6 +78,7 @@
             :key="index"
           >
             <v-card
+              height="100%"
               elevation="3"
               dark
               color="grey darken-3"
