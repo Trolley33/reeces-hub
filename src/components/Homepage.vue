@@ -55,19 +55,29 @@
             v-for="(card, index) in education"
             :key="index"
           >
-            <v-card height="100%" elevation="3" dark color="grey darken-3">
-              <v-card-title>
-                {{ card.title }}
-              </v-card-title>
-              <v-card-subtitle>
-                {{ card.subtitle }}
-              </v-card-subtitle>
-              <v-card-text>
-                <p>
-                  {{ card.body }}
-                </p>
-              </v-card-text>
-            </v-card>
+            <v-hover v-slot:default="{ hover }">
+              <v-card
+                height="100%"
+                elevation="3"
+                dark
+                :class="[
+                  { 'grey darken-3': !hover },
+                  { 'grey darken-2': hover }
+                ]"
+              >
+                <v-card-title>
+                  {{ card.title }}
+                </v-card-title>
+                <v-card-subtitle>
+                  {{ card.subtitle }}
+                </v-card-subtitle>
+                <v-card-text>
+                  <p>
+                    {{ card.body }}
+                  </p>
+                </v-card-text>
+              </v-card>
+            </v-hover>
           </v-col>
         </v-row>
       </v-card>
