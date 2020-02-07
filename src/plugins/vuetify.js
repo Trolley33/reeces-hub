@@ -1,17 +1,17 @@
-import Vue from 'vue';
-import Vuetify from 'vuetify/lib';
+import Vue from "vue";
+import Vuetify from "vuetify/lib";
 
-import colors from 'vuetify/lib/util/colors';
+import colors from "vuetify/lib/util/colors";
 
 Vue.use(Vuetify);
 
 export default new Vuetify({
-    theme: {
-        themes: {
-            dark: {
-                primary: colors.pink,
-            }
-        },
-        dark: true
-    }
+  theme: {
+    themes: {
+      dark: {
+        primary: colors.pink
+      }
+    },
+    dark: true
+  }
 });

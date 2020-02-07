@@ -10,12 +10,8 @@
 
         <p>The page you were looking for does not exist</p>
 
-        <router-link
-          :to="{path: '/'}"
-        >
-          <v-btn
-            color="primary"
-          >
+        <router-link :to="{ path: '/' }">
+          <v-btn color="primary">
             Get me out of here!
           </v-btn>
         </router-link>
@@ -25,11 +21,11 @@
 </template>
 
 <script>
-  export default {
-    name: 'FourOhFour',
+export default {
+  name: "FourOhFour",
 
-    created () {
-      this.$ssrContext && this.$ssrContext.res.status(404)
-    },
+  created() {
+    this.$ssrContext && this.$ssrContext.res.status(404);
   }
+};
 </script>
