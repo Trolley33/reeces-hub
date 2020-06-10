@@ -18,8 +18,6 @@ titles:
 key: page-about
 ---
 
-Just say something about yourself. :+1:
+My name is Reece, I'm a software development student who enjoys programming in his spare time. This website is where I document my thoughts and showcase any projects I think are worth showing off, you can also visit my [Github](https://github.com/Trolley33?tab=repositories) for any projects I don't feel are worthy of a full write up. 
 
-{% highlight javascript %}
-(() => console.log('hello, world!'))();
-{% endhighlight %}
+Enjoy your stay!

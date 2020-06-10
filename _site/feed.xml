@@ -1,100 +1,201 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-06-10T03:34:12+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Reece’s Hub</title><subtitle>It has all my stuff!
-</subtitle><author><name>reece Trolley</name></author><entry><title type="html">My Introduction to C++</title><link href="http://localhost:4000/2020/06/10/intro-to-cpp.html" rel="alternate" type="text/html" title="My Introduction to C++" /><published>2020-06-10T00:00:00+01:00</published><updated>2020-06-10T00:00:00+01:00</updated><id>http://localhost:4000/2020/06/10/intro-to-cpp</id><content type="html" xml:base="http://localhost:4000/2020/06/10/intro-to-cpp.html">&lt;p&gt;So for the past few weeks I’ve been diving into C++ in my spare time, trying to figure out how to tame this beast of a language. Everyone knows that it’s this super speedy and widely used language, but at the same time it has all this weird spookiness surrounding it. Pointers? Templates? Headers? In the age of JavaScript and Python which are so useful and intuitive languages it begs the question…&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-06-10T21:57:26+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Reece’s Hub</title><subtitle>It has all my stuff!
+</subtitle><author><name>reece Trolley</name></author><entry><title type="html">Making a Game in SFML: Basics</title><link href="http://localhost:4000/2020/06/10/sfml-2.html" rel="alternate" type="text/html" title="Making a Game in SFML: Basics" /><published>2020-06-10T00:00:00+01:00</published><updated>2020-06-10T00:00:00+01:00</updated><id>http://localhost:4000/2020/06/10/sfml-2</id><content type="html" xml:base="http://localhost:4000/2020/06/10/sfml-2.html">&lt;div class=&quot;panel seriesNote&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;Part 2&lt;/strong&gt; in the &lt;strong&gt;Making a Game in SFML&lt;/strong&gt; series.&lt;/p&gt;
+  &lt;ul&gt;
+    
+    
+    
+    
 
-&lt;p&gt;&lt;em&gt;Why bother with C++ anymore?&lt;/em&gt;&lt;/p&gt;
+    
+    &lt;li&gt;Part 1 - &lt;a href=&quot;/2020/06/09/sfml-1.html&quot;&gt;Making a Game in SFML: Prelude&lt;/a&gt;&lt;/li&gt;
+    
+    
+    
+    
+    
 
-&lt;p&gt;Well that’s the question I wanted to get the answer to. C++ has always interested me but even getting past the setup seemed like a giant hurdle.&lt;/p&gt;
+    
+    &lt;li&gt;Part 2 - &lt;i&gt;&lt;b&gt;Making a Game in SFML: Basics&lt;/b&gt;&lt;/i&gt;&lt;/li&gt;
+    
+    
+    
+  &lt;/ul&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Take for example the installation process for python:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Download the Python installation executable for your system from the &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;website&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Run the executable and follow installation steps.&lt;/li&gt;
-  &lt;li&gt;Done.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;style&gt;
+  .panel {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05)
+  }
 
-&lt;p&gt;To then do anything with Python you can type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; into the command line or open IDLE to write some code and just run. Simple as that.&lt;/p&gt;
+  .panel ul {
+    margin-left: 0;
+  }
 
-&lt;p&gt;“Installing” C++ is… a bit different; because C++ isn’t a language you install (behind the scenes neither is Python really, it just seems that way).&lt;/p&gt;
+  .panel li {
+    border-top: 1px solid #cbcbcb;
+    list-style-type: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+&lt;/style&gt;
 
-&lt;p&gt;In order to execute the following “Hello World!” example:&lt;/p&gt;
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/* helloworld.cpp */&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;p&gt;Last time we worked on getting a simple SFML window to popup, a completely blank canvas for us to begin our work on - &lt;em&gt;perfect&lt;/em&gt;.
+&lt;!--more--&gt;&lt;/p&gt;</content><author><name>reece Trolley</name></author><category term="c++" /><category term="sfml" /><summary type="html">Part 2 in the Making a Game in SFML series. Part 1 - Making a Game in SFML: Prelude Part 2 - Making a Game in SFML: Basics Last time we worked on getting a simple SFML window to popup, a completely blank canvas for us to begin our work on - perfect.</summary></entry><entry><title type="html">Making a Game in SFML: Prelude</title><link href="http://localhost:4000/2020/06/09/sfml-1.html" rel="alternate" type="text/html" title="Making a Game in SFML: Prelude" /><published>2020-06-09T00:00:00+01:00</published><updated>2020-06-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/06/09/sfml-1</id><content type="html" xml:base="http://localhost:4000/2020/06/09/sfml-1.html">&lt;p&gt;C++. The language which stikes fear into the very heart of CS students. In the age of Python and JavaScript it is mearly a fable told to scare us surely? Pointers. Segmentation faults. Manually installing libraries. The stories can’t be true - &lt;strong&gt;can they?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;div class=&quot;panel seriesNote&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;Part 1&lt;/strong&gt; in the &lt;strong&gt;Making a Game in SFML&lt;/strong&gt; series.&lt;/p&gt;
+  &lt;ul&gt;
+    
+    
+    
+    
+
+    
+    &lt;li&gt;Part 1 - &lt;i&gt;&lt;b&gt;Making a Game in SFML: Prelude&lt;/b&gt;&lt;/i&gt;&lt;/li&gt;
+    
+    
+    
+    
+    
+
+    
+    &lt;li&gt;Part 2 - &lt;a href=&quot;/2020/06/10/sfml-2.html&quot;&gt;Making a Game in SFML: Basics&lt;/a&gt;&lt;/li&gt;
+    
+    
+    
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .panel {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05)
+  }
+
+  .panel ul {
+    margin-left: 0;
+  }
+
+  .panel li {
+    border-top: 1px solid #cbcbcb;
+    list-style-type: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+&lt;/style&gt;
+
+&lt;p&gt;Over the past few weeks I’ve been looking into getting my head around C++ - the idea of speed and power have always sounded very exciting and other languages just weren’t doing it for me. Compiling to a binary also means when you want to share your new exciting project with a friend you just need to send them a single zip file, rather than an instruction list of which Python packages to install for example.&lt;/p&gt;
+
+&lt;p&gt;One of the most popular C++ game engines/libaries is &lt;strong&gt;S&lt;/strong&gt;uper &lt;strong&gt;F&lt;/strong&gt;ast &lt;strong&gt;M&lt;/strong&gt;edia &lt;strong&gt;L&lt;/strong&gt;ibrary (&lt;strong&gt;SFML&lt;/strong&gt;) - I won’t be covering how to install SFML here, as there are hundreds of ways to do it per system &lt;em&gt;and hundreds of people who will say I’m showing you the wrong way anyway.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;So, to get started in my game development process I wanted a simple starting point - the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hello World!&lt;/code&gt; equivalent in game development &lt;a href=&quot;https://www.ponggame.org/pong-no-flash.php&quot;&gt;Pong&lt;/a&gt; is a classic arcade game with a painfully simple concept: hit the ball. Since my future goals would involve a complicated project I wanted to get the basics down first; this included player controls, rendering, and networking.&lt;/p&gt;
+
+&lt;p&gt;I decided to make a simple ‘starter’ template which I could then bolster for future use.&lt;/p&gt;
+
+&lt;p&gt;With C++ a very useful practice is the use of header files. These are descriptions of what a class/function will do when used, but not how it will do it. It allows you to abstract the structure of the class without worring about the smaller picture. I created my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Application.hpp&lt;/code&gt; file as below:&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef __APPLICATION_H__
+#define __APPLICATION_H__
 &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;You must:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Find, download, and install a suitable compiler for your system (honestly even just the downloads page for &lt;a href=&quot;http://mingw-w64.org/doku.php/download&quot;&gt;mingw-w64&lt;/a&gt; had me confused for a while).&lt;/li&gt;
-  &lt;li&gt;Add the compiler to your system’s path variable.&lt;/li&gt;
-  &lt;li&gt;Compile your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;helloworld.cpp&lt;/code&gt; file from the command line with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;g++ helloworld.cpp&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Execute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./a.exe&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;A little more tricky, but still not too bad I guess? Coming from a Python/Java start I’m all about &lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot;&gt;OOP&lt;/a&gt; so let’s get a class in there. In Java I’d write something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Person.java&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;outputName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;So I try to transfer across to C++ using the right syntax:&lt;/p&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// person.cpp&lt;/span&gt;
-
-&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;span class=&quot;cp&quot;&gt;#include &quot;SFML/Graphics.hpp&quot;
+#include &quot;SFML/Main.hpp&quot;
+#include &quot;SFML/System.hpp&quot;
 &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;App&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;nl&quot;&gt;private:&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;sf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RenderWindow&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;sf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Int64&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;previousUpdate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;sf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Int64&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elapsedTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;sf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Int32&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frameDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outputName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fixedUpdate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Reece&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.8288&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;outputName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;processEvents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;processInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#endif // __APPLICATION_H__
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;sup style=&quot;color: #777&quot;&gt;Don’t worry about the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#ifndef __APPLICATION_H__&lt;/code&gt; weirdness, it just prevents this file being included more than once by mistake.&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Here you can see a basic constructor which will take the width, height, and title of the game app; 2 update functions (fixedUpdate is called after certain amount of time, update is called every frame); and 2 processing functions for events and inputs.&lt;/p&gt;
+
+&lt;p&gt;I expanded the constructor to initialise and launch the SFML window like so:&lt;/p&gt;
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Create render window.&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;VideoMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Init timer variables.&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;previousUpdate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elapsedTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frameDelta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;sf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Clock&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Number of game ticks per second.&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tickRate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isOpen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Process windows events (move, resize, close).&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;processEvents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Process user inputs.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;processInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Calculate time variables.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;frameDelta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getElapsedTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;asMilliseconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;clock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;restart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;elapsedTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elapsedTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frameDelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// If we are due a game tick,&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elapsedTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;previousUpdate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tickRate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fixedUpdate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;previousUpdate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elapsedTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Output&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;PS&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;C:\Users\reece\Documents\projects\cpp&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;\person.cpp&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;PS&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;C:\Users\reece\Documents\projects\cpp&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;\a.exe&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;      
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Reece&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;At minimum the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;processEvents&lt;/code&gt; function must also be declared or the window will hang when launched:&lt;/p&gt;
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;processEvents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;sf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Event&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pollEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Closed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;With a few example paramaters this gives us the following result:&lt;/p&gt;
 
-&lt;p&gt;Cool! A refactor here, a few bits and pieces there and it all works. Could it be this easy?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/sfml-intro-1.JPG&quot; alt=&quot;Woo hoo&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;It would not be this easy.&lt;/p&gt;
+&lt;p&gt;Sucess! We have opened a SFML window.&lt;/p&gt;
 
-&lt;p&gt;Header files? Linking errors? Adding 15 different flags for compiling? Things got out of hand quickly and I’m still no where near confident with using C++ ‘correctly’ but I can now at least do stuff I want to do in it.&lt;/p&gt;
-
-&lt;p&gt;For a while I’ve been wanting to create an arcade-esque game about Rock Paper Scissors (idea provided many moons ago by &lt;a href=&quot;https://twitter.com/Kruuxty&quot;&gt;Kruuxt&lt;/a&gt;) - and I decided I was finally going to give a go using &lt;a href=&quot;https://www.sfml-dev.org/&quot;&gt;SFML&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Stay tuned to see my development progress as time goes on.&lt;/p&gt;</content><author><name>reece Trolley</name></author><category term="c++" /><category term="intro" /><summary type="html">So for the past few weeks I’ve been diving into C++ in my spare time, trying to figure out how to tame this beast of a language. Everyone knows that it’s this super speedy and widely used language, but at the same time it has all this weird spookiness surrounding it. Pointers? Templates? Headers? In the age of JavaScript and Python which are so useful and intuitive languages it begs the question… Why bother with C++ anymore? Well that’s the question I wanted to get the answer to. C++ has always interested me but even getting past the setup seemed like a giant hurdle. Take for example the installation process for python: Download the Python installation executable for your system from the website. Run the executable and follow installation steps. Done. To then do anything with Python you can type python into the command line or open IDLE to write some code and just run. Simple as that. “Installing” C++ is… a bit different; because C++ isn’t a language you install (behind the scenes neither is Python really, it just seems that way). In order to execute the following “Hello World!” example: /* helloworld.cpp */ #include &amp;lt;iostream&amp;gt; int main() { std::cout &amp;lt;&amp;lt; &quot;Hello World!&quot; &amp;lt;&amp;lt; std::endl; } You must: Find, download, and install a suitable compiler for your system (honestly even just the downloads page for mingw-w64 had me confused for a while). Add the compiler to your system’s path variable. Compile your helloworld.cpp file from the command line with g++ helloworld.cpp Execute ./a.exe A little more tricky, but still not too bad I guess? Coming from a Python/Java start I’m all about OOP so let’s get a class in there. In Java I’d write something like this: // Person.java class Person { private int age; private String name; private float height; public Person(int _age, String _name, float _height) { age = _age; name = _name; height = _height; } public void outputName() { System.out.println(name); } } So I try to transfer across to C++ using the right syntax: // person.cpp #include &amp;lt;iostream&amp;gt; class Person { private: int age; std::string name; float height; public: Person(int _age, std::string _name, float _height) { age = _age; name = _name; height = _height; } void outputName() { std::cout &amp;lt;&amp;lt; name &amp;lt;&amp;lt; std::endl; } } int main() { Person p(20, &quot;Reece&quot;, 1.8288f) p.outputName(); } # Output PS C:\Users\reece\Documents\projects\cpp&amp;gt; g++ .\person.cpp PS C:\Users\reece\Documents\projects\cpp&amp;gt; .\a.exe Reece Cool! A refactor here, a few bits and pieces there and it all works. Could it be this easy? It would not be this easy. Header files? Linking errors? Adding 15 different flags for compiling? Things got out of hand quickly and I’m still no where near confident with using C++ ‘correctly’ but I can now at least do stuff I want to do in it. For a while I’ve been wanting to create an arcade-esque game about Rock Paper Scissors (idea provided many moons ago by Kruuxt) - and I decided I was finally going to give a go using SFML. Stay tuned to see my development progress as time goes on.</summary></entry></feed>
+&lt;p&gt;Up next we will get into rendering shapes/sprites, and handling user inputs.&lt;/p&gt;</content><author><name>reece Trolley</name></author><category term="c++" /><category term="sfml" /><summary type="html">C++. The language which stikes fear into the very heart of CS students. In the age of Python and JavaScript it is mearly a fable told to scare us surely? Pointers. Segmentation faults. Manually installing libraries. The stories can’t be true - can they?</summary></entry></feed>

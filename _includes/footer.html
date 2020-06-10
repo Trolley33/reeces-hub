@@ -1,0 +1,11 @@
+<footer class="footer py-3 js-page-footer">
+  <div class="main">
+    <div class="site-info">
+      <div>
+        {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
+        {%- assign _locale_copyright_dates = __return -%}
+        © {{ site.title }} {{ _locale_copyright_dates }}
+      </div>
+    </div>
+  </div>
+</footer>

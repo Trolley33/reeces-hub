@@ -1,0 +1,8 @@
+I"�<p>C++. The language which stikes fear into the very heart of CS students. In the age of Python and JavaScript it is mearly a fable told to scare us surely? Pointers. Segmentation faults. Manually installing libraries. The stories can’t be true - <strong>can they?</strong></p>
+
+<p>Over the past few weeks I’ve been looking into getting my head around C++ - the idea of speed and power have always sounded very exciting and other languages just weren’t doing it for me. Compiling to a binary also means when you want to share your new exciting project with a friend you just need to send them a single zip file, rather than an instruction list of which Python packages to install for example.</p>
+
+<p>I won’t be covering how to install SFML here, as there are hundreds of ways to do it per system <em>and hundreds of people who will say I’m showing you the wrong way anyway.</em></p>
+
+<p>So, to get started in my game development process I wanted a simple starting point, the Hello World! equivalent is game development is typically <a href="https://www.ponggame.org/pong-no-flash.php">Pong</a> classic arcade game with a painfully simple concept - hit the ball.</p>
+:ET

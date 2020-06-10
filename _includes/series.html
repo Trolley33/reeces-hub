@@ -1,0 +1,56 @@
+{% if page.series %}
+
+{% assign count = '0' %}
+{% assign idx = '0' %}
+{% for post in site.posts reversed %}
+{% if post.series == page.series %}
+{% capture count %}{{ count | plus: '1' }}{% endcapture %}
+{% if post.url == page.url %}
+{% capture idx %}{{count}}{% endcapture %}
+{% endif %}
+{% endif %}
+{% endfor %}
+
+<div class="panel seriesNote">
+  <p><strong>Part {{ idx }}</strong> in the <strong>{{ page.series }}</strong> series.</p>
+  <ul>
+    {% assign count = '0' %}
+    {% for post in site.posts reversed %}
+    {% if post.series == page.series %}
+    {% capture count %}{{ count | plus: '1' }}{% endcapture %}
+
+    {% if page.url == post.url %}
+    <li>Part {{ count }} - <i><b>{{post.title}}</b></i></li>
+    {% else %}
+    <li>Part {{ count }} - <a href="{{post.url}}">{{post.title}}</a></li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+<style>
+  .panel {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05)
+  }
+
+  .panel ul {
+    margin-left: 0;
+  }
+
+  .panel li {
+    border-top: 1px solid #cbcbcb;
+    list-style-type: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+</style>

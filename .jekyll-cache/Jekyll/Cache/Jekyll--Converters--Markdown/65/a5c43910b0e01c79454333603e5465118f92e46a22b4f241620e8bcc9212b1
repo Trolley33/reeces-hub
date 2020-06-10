@@ -1,0 +1,100 @@
+I"?.<p>C++. The language which stikes fear into the very heart of CS students. In the age of Python and JavaScript it is mearly a fable told to scare us surely? Pointers. Segmentation faults. Manually installing libraries. The stories can’t be true - <strong>can they?</strong></p>
+
+<p>Over the past few weeks I’ve been looking into getting my head around C++ - the idea of speed and power have always sounded very exciting and other languages just weren’t doing it for me. Compiling to a binary also means when you want to share your new exciting project with a friend you just need to send them a single zip file, rather than an instruction list of which Python packages to install for example.</p>
+
+<p>One of the most popular C++ game engines/libaries is <strong>S</strong>uper <strong>F</strong>ast <strong>M</strong>edia <strong>L</strong>ibrary (<strong>SFML</strong>) - I won’t be covering how to install SFML here, as there are hundreds of ways to do it per system <em>and hundreds of people who will say I’m showing you the wrong way anyway.</em></p>
+
+<p>So, to get started in my game development process I wanted a simple starting point - the <code class="language-plaintext highlighter-rouge">Hello World!</code> equivalent in game development <a href="https://www.ponggame.org/pong-no-flash.php">Pong</a> is a classic arcade game with a painfully simple concept: hit the ball. Since my future goals would involve a complicated project I wanted to get the basics down first; this included player controls, rendering, and networking.</p>
+
+<p>I decided to make a simple ‘starter’ template which I could then bolster for future use.</p>
+
+<p>With C++ a very useful practice is the use of header files. These are descriptions of what a class/function will do when used, but not how it will do it. It allows you to abstract the structure of the class without worring about the smaller picture. I created my <code class="language-plaintext highlighter-rouge">Application.hpp</code> file as below:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef __APPLICATION_H__
+#define __APPLICATION_H__
+</span>
+<span class="cp">#include "SFML/Graphics.hpp"
+#include "SFML/Main.hpp"
+#include "SFML/System.hpp"
+</span>
+<span class="k">class</span> <span class="nc">App</span>
+<span class="p">{</span>
+<span class="nl">private:</span>
+  <span class="n">sf</span><span class="o">::</span><span class="n">RenderWindow</span> <span class="n">window</span><span class="p">;</span>
+
+  <span class="n">sf</span><span class="o">::</span><span class="n">Int64</span> <span class="n">previousUpdate</span><span class="p">;</span>
+  <span class="n">sf</span><span class="o">::</span><span class="n">Int64</span> <span class="n">elapsedTime</span><span class="p">;</span>
+
+  <span class="n">sf</span><span class="o">::</span><span class="n">Int32</span> <span class="n">frameDelta</span><span class="p">;</span>
+
+<span class="nl">public:</span>
+  <span class="n">App</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="n">sf</span><span class="o">::</span><span class="n">String</span> <span class="n">title</span><span class="p">);</span>
+
+  <span class="kt">void</span> <span class="n">update</span><span class="p">();</span>
+  <span class="kt">void</span> <span class="n">fixedUpdate</span><span class="p">();</span>
+
+  <span class="kt">void</span> <span class="n">processEvents</span><span class="p">();</span>
+  <span class="kt">void</span> <span class="n">processInput</span><span class="p">();</span>
+<span class="p">};</span>
+<span class="cp">#endif // __APPLICATION_H__
+</span><span class="err">```</span> <span class="o">&lt;</span><span class="n">sup</span><span class="o">&gt;&lt;</span><span class="n">sub</span><span class="o">&gt;</span><span class="n">Don</span><span class="err">'</span><span class="n">t</span> <span class="n">worry</span> <span class="n">about</span> <span class="n">the</span> <span class="err">`#</span><span class="n">ifndef</span> <span class="n">__APPLICATION_H__</span><span class="err">`</span> <span class="n">weirdness</span><span class="p">,</span> <span class="n">it</span> <span class="n">just</span> <span class="n">prevents</span> <span class="k">this</span> <span class="n">file</span> <span class="n">being</span> <span class="n">included</span> <span class="n">more</span> <span class="n">than</span> <span class="n">once</span> <span class="n">by</span> <span class="n">mistake</span><span class="p">.</span><span class="o">&lt;/</span><span class="n">sub</span><span class="o">&gt;&lt;/</span><span class="n">sup</span><span class="o">&gt;</span>
+
+<span class="n">Here</span> <span class="n">you</span> <span class="n">can</span> <span class="n">see</span> <span class="n">a</span> <span class="n">basic</span> <span class="n">constructor</span> <span class="n">which</span> <span class="n">will</span> <span class="n">take</span> <span class="n">the</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">and</span> <span class="n">title</span> <span class="n">of</span> <span class="n">the</span> <span class="n">game</span> <span class="n">app</span><span class="p">;</span> <span class="mi">2</span> <span class="n">update</span> <span class="nf">functions</span> <span class="p">(</span><span class="n">fixedUpdate</span> <span class="n">is</span> <span class="n">called</span> <span class="n">after</span> <span class="n">certain</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">time</span><span class="p">,</span> <span class="n">update</span> <span class="n">is</span> <span class="n">called</span> <span class="n">every</span> <span class="n">frame</span><span class="p">);</span> <span class="n">and</span> <span class="mi">2</span> <span class="n">processing</span> <span class="n">functions</span> <span class="k">for</span> <span class="n">events</span> <span class="n">and</span> <span class="n">inputs</span><span class="p">.</span>
+
+<span class="n">I</span> <span class="n">expanded</span> <span class="n">the</span> <span class="n">constructor</span> <span class="n">to</span> <span class="n">initialise</span> <span class="n">and</span> <span class="n">launch</span> <span class="n">the</span> <span class="n">SFML</span> <span class="n">window</span> <span class="n">like</span> <span class="n">so</span><span class="o">:</span>
+<span class="err">```</span><span class="n">c</span><span class="o">++</span>
+<span class="n">App</span><span class="o">::</span><span class="n">App</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="n">sf</span><span class="o">::</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// Create render window.</span>
+  <span class="n">window</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="n">sf</span><span class="o">::</span><span class="n">VideoMode</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">title</span><span class="p">);</span>
+
+  <span class="c1">// Init timer variables.</span>
+  <span class="n">previousUpdate</span> <span class="o">=</span> <span class="n">elapsedTime</span> <span class="o">=</span> <span class="n">frameDelta</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">sf</span><span class="o">::</span><span class="n">Clock</span> <span class="n">clock</span><span class="p">;</span>
+
+  <span class="c1">// Number of game ticks per second.</span>
+  <span class="k">const</span> <span class="kt">int</span> <span class="n">tickRate</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="n">window</span><span class="p">.</span><span class="n">isOpen</span><span class="p">())</span>
+  <span class="p">{</span>
+    <span class="c1">// Process windows events (move, resize, close).</span>
+    <span class="n">processEvents</span><span class="p">();</span>
+    <span class="c1">// Process user inputs.</span>
+    <span class="n">processInput</span><span class="p">();</span>
+
+    <span class="c1">// Calculate time variables.</span>
+    <span class="n">frameDelta</span> <span class="o">=</span> <span class="n">clock</span><span class="p">.</span><span class="n">getElapsedTime</span><span class="p">().</span><span class="n">asMilliseconds</span><span class="p">();</span>
+    <span class="n">clock</span><span class="p">.</span><span class="n">restart</span><span class="p">();</span>
+    <span class="n">elapsedTime</span> <span class="o">=</span> <span class="n">elapsedTime</span> <span class="o">+</span> <span class="n">frameDelta</span><span class="p">;</span>
+    <span class="c1">// If we are due a game tick,</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">elapsedTime</span> <span class="o">-</span> <span class="n">previousUpdate</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">/</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">tickRate</span><span class="p">))</span>
+    <span class="p">{</span>
+      <span class="k">this</span><span class="o">-&gt;</span><span class="n">fixedUpdate</span><span class="p">();</span>
+      <span class="n">previousUpdate</span> <span class="o">=</span> <span class="n">elapsedTime</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">update</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>At minimum the <code class="language-plaintext highlighter-rouge">processEvents</code> function must also be declared or the window will hang when launched:</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">App</span><span class="o">::</span><span class="n">processEvents</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">sf</span><span class="o">::</span><span class="n">Event</span> <span class="n">e</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">window</span><span class="p">.</span><span class="n">pollEvent</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">sf</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">window</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>With a few example paramaters this gives us the following result:</p>
+
+<p><img src="/assets/images/sfml-intro-1.JPG" alt="Woo hoo" /></p>
+
+<p>Sucess! We have opened a SFML window.</p>
+
+<p>Up next we will get into rendering shapes/sprites, and handling user inputs.</p>
+:ET
