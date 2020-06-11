@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-06-10T21:57:26+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Reece’s Hub</title><subtitle>It has all my stuff!
-</subtitle><author><name>reece Trolley</name></author><entry><title type="html">Making a Game in SFML: Basics</title><link href="http://localhost:4000/2020/06/10/sfml-2.html" rel="alternate" type="text/html" title="Making a Game in SFML: Basics" /><published>2020-06-10T00:00:00+01:00</published><updated>2020-06-10T00:00:00+01:00</updated><id>http://localhost:4000/2020/06/10/sfml-2</id><content type="html" xml:base="http://localhost:4000/2020/06/10/sfml-2.html">&lt;div class=&quot;panel seriesNote&quot;&gt;
-  &lt;p&gt;&lt;strong&gt;Part 2&lt;/strong&gt; in the &lt;strong&gt;Making a Game in SFML&lt;/strong&gt; series.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-06-11T23:51:05+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Reece’s Hub</title><subtitle>It has all my stuff!
+</subtitle><author><name>reece Trolley</name><email>reecetrolley@gmail.com</email></author><entry><title type="html">Making a Game in SFML: Basics</title><link href="http://localhost:4000/2020/06/10/sfml-2.html" rel="alternate" type="text/html" title="Making a Game in SFML: Basics" /><published>2020-06-10T00:00:00+00:00</published><updated>2020-06-10T00:00:00+00:00</updated><id>http://localhost:4000/2020/06/10/sfml-2</id><content type="html" xml:base="http://localhost:4000/2020/06/10/sfml-2.html">&lt;div class=&quot;panel seriesNote&quot;&gt;
   &lt;ul&gt;
     
     
@@ -8,7 +7,7 @@
     
 
     
-    &lt;li&gt;Part 1 - &lt;a href=&quot;/2020/06/09/sfml-1.html&quot;&gt;Making a Game in SFML: Prelude&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Making a Game in SFML:&lt;/b&gt; &lt;a href=&quot;/2020/06/09/sfml-1.html&quot;&gt;Prelude&lt;/a&gt;&lt;/li&gt;
     
     
     
@@ -16,7 +15,7 @@
     
 
     
-    &lt;li&gt;Part 2 - &lt;i&gt;&lt;b&gt;Making a Game in SFML: Basics&lt;/b&gt;&lt;/i&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Making a Game in SFML:&lt;/b&gt; &lt;i&gt;Basics&lt;/i&gt;&lt;/li&gt;
     
     
     
@@ -41,20 +40,21 @@
   }
 
   .panel li {
-    border-top: 1px solid #cbcbcb;
     list-style-type: none;
     padding-top: 6px;
     padding-bottom: 6px;
+  }
+  .panel li:not(:first-child) {
+    border-top: 1px solid #cbcbcb;
   }
 &lt;/style&gt;
 
 &lt;p&gt;Last time we worked on getting a simple SFML window to popup, a completely blank canvas for us to begin our work on - &lt;em&gt;perfect&lt;/em&gt;.
-&lt;!--more--&gt;&lt;/p&gt;</content><author><name>reece Trolley</name></author><category term="c++" /><category term="sfml" /><summary type="html">Part 2 in the Making a Game in SFML series. Part 1 - Making a Game in SFML: Prelude Part 2 - Making a Game in SFML: Basics Last time we worked on getting a simple SFML window to popup, a completely blank canvas for us to begin our work on - perfect.</summary></entry><entry><title type="html">Making a Game in SFML: Prelude</title><link href="http://localhost:4000/2020/06/09/sfml-1.html" rel="alternate" type="text/html" title="Making a Game in SFML: Prelude" /><published>2020-06-09T00:00:00+01:00</published><updated>2020-06-09T00:00:00+01:00</updated><id>http://localhost:4000/2020/06/09/sfml-1</id><content type="html" xml:base="http://localhost:4000/2020/06/09/sfml-1.html">&lt;p&gt;C++. The language which stikes fear into the very heart of CS students. In the age of Python and JavaScript it is mearly a fable told to scare us surely? Pointers. Segmentation faults. Manually installing libraries. The stories can’t be true - &lt;strong&gt;can they?&lt;/strong&gt;&lt;/p&gt;
+&lt;!--more--&gt;&lt;/p&gt;</content><author><name>reece Trolley</name><email>reecetrolley@gmail.com</email></author><category term="c++" /><category term="sfml" /><summary type="html">Making a Game in SFML: Prelude Making a Game in SFML: Basics Last time we worked on getting a simple SFML window to popup, a completely blank canvas for us to begin our work on - perfect.</summary></entry><entry><title type="html">Making a Game in SFML: Prelude</title><link href="http://localhost:4000/2020/06/09/sfml-1.html" rel="alternate" type="text/html" title="Making a Game in SFML: Prelude" /><published>2020-06-09T00:00:00+00:00</published><updated>2020-06-09T00:00:00+00:00</updated><id>http://localhost:4000/2020/06/09/sfml-1</id><content type="html" xml:base="http://localhost:4000/2020/06/09/sfml-1.html">&lt;p&gt;C++. The language which stikes fear into the very heart of CS students. In the age of Python and JavaScript it is mearly a fable told to scare us surely? Pointers. Segmentation faults. Manually installing libraries. The stories can’t be true - &lt;strong&gt;can they?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
 &lt;div class=&quot;panel seriesNote&quot;&gt;
-  &lt;p&gt;&lt;strong&gt;Part 1&lt;/strong&gt; in the &lt;strong&gt;Making a Game in SFML&lt;/strong&gt; series.&lt;/p&gt;
   &lt;ul&gt;
     
     
@@ -62,7 +62,7 @@
     
 
     
-    &lt;li&gt;Part 1 - &lt;i&gt;&lt;b&gt;Making a Game in SFML: Prelude&lt;/b&gt;&lt;/i&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Making a Game in SFML:&lt;/b&gt; &lt;i&gt;Prelude&lt;/i&gt;&lt;/li&gt;
     
     
     
@@ -70,7 +70,7 @@
     
 
     
-    &lt;li&gt;Part 2 - &lt;a href=&quot;/2020/06/10/sfml-2.html&quot;&gt;Making a Game in SFML: Basics&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Making a Game in SFML:&lt;/b&gt; &lt;a href=&quot;/2020/06/10/sfml-2.html&quot;&gt;Basics&lt;/a&gt;&lt;/li&gt;
     
     
     
@@ -95,10 +95,12 @@
   }
 
   .panel li {
-    border-top: 1px solid #cbcbcb;
     list-style-type: none;
     padding-top: 6px;
     padding-bottom: 6px;
+  }
+  .panel li:not(:first-child) {
+    border-top: 1px solid #cbcbcb;
   }
 &lt;/style&gt;
 
@@ -198,4 +200,4 @@
 
 &lt;p&gt;Sucess! We have opened a SFML window.&lt;/p&gt;
 
-&lt;p&gt;Up next we will get into rendering shapes/sprites, and handling user inputs.&lt;/p&gt;</content><author><name>reece Trolley</name></author><category term="c++" /><category term="sfml" /><summary type="html">C++. The language which stikes fear into the very heart of CS students. In the age of Python and JavaScript it is mearly a fable told to scare us surely? Pointers. Segmentation faults. Manually installing libraries. The stories can’t be true - can they?</summary></entry></feed>
+&lt;p&gt;Up next we will get into rendering shapes/sprites, and handling user inputs.&lt;/p&gt;</content><author><name>reece Trolley</name><email>reecetrolley@gmail.com</email></author><category term="c++" /><category term="sfml" /><summary type="html">C++. The language which stikes fear into the very heart of CS students. In the age of Python and JavaScript it is mearly a fable told to scare us surely? Pointers. Segmentation faults. Manually installing libraries. The stories can’t be true - can they?</summary></entry></feed>

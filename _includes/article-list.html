@@ -55,7 +55,7 @@
           </div>
         {%- endif -%}
         <div class="item__content">
-          <header><a href="{{ _article_url }}"><h2 itemprop="headline" class="item__header">{{ _article.title }}</h2></a></header>
+          <a href="{{ _article_url }}"><header><h2 itemprop="headline" class="item__header">{{ _article.title }}</h2></header></a>
           <div class="item__description">
             {%- if _article.excerpt and include.show_excerpt -%}
               <div class="article__content" itemprop="description articleBody">
@@ -111,6 +111,7 @@
       {%- if include.size == 'sm' -%}
         <div class="cell cell--12 cell--md-4 cell--lg-3">
           <div class="card card--flat">
+            
             {%- if _article.cover -%}
               <div class="card__image">
                 <img class="image" src="{{ _article_cover }}" />
@@ -127,15 +128,17 @@
 
         <div class="cell cell--12 cell--md-6 cell--lg-4">
           <div class="card card--flat">
+            <a href="{{ _article_url }}">
             {%- if _article.cover -%}
               <div class="card__image"><img src="{{ _article_cover }}" /></div>
             {%- endif -%}
               <div class="card__content">
                 <header>
-                  <a href="{{ _article_url }}"><h2 class="card__header">{{ _article.title }}</h2></a>
+                  <h2 class="card__header">{{ _article.title }}</h2>
                 </header>
               </div>
           </div>
+          </a>
         </div>
       {%- endif -%}
     {%- endif -%}

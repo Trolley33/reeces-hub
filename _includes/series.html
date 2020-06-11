@@ -12,7 +12,6 @@
 {% endfor %}
 
 <div class="panel seriesNote">
-  <p><strong>Part {{ idx }}</strong> in the <strong>{{ page.series }}</strong> series.</p>
   <ul>
     {% assign count = '0' %}
     {% for post in site.posts reversed %}
@@ -20,9 +19,9 @@
     {% capture count %}{{ count | plus: '1' }}{% endcapture %}
 
     {% if page.url == post.url %}
-    <li>Part {{ count }} - <i><b>{{post.title}}</b></i></li>
+    <li><b>{{post.series}}:</b> <i>{{post.subtitle}}</i></li>
     {% else %}
-    <li>Part {{ count }} - <a href="{{post.url}}">{{post.title}}</a></li>
+    <li><b>{{post.series}}:</b> <a href="{{post.url}}">{{post.subtitle}}</a></li>
     {% endif %}
     {% endif %}
     {% endfor %}
@@ -48,9 +47,11 @@
   }
 
   .panel li {
-    border-top: 1px solid #cbcbcb;
     list-style-type: none;
     padding-top: 6px;
     padding-bottom: 6px;
+  }
+  .panel li:not(:first-child) {
+    border-top: 1px solid #cbcbcb;
   }
 </style>
