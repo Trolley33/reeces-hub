@@ -111,22 +111,23 @@
       {%- if include.size == 'sm' -%}
         <div class="cell cell--12 cell--md-4 cell--lg-3">
           <div class="card card--flat">
-            
+            <a href="{{ _article_url }}">
             {%- if _article.cover -%}
               <div class="card__image">
                 <img class="image" src="{{ _article_cover }}" />
                 <div class="overlay overlay--bottom">
                   <header>
-                    <a href="{{ _article_url }}"><h2 class="card__header">{{ _article.title }}</h2></a>
+                    <h2 class="card__header">{{ _article.title }}</h2>
                   </header>
                 </div>
               </div>
             {%- endif -%}
+            </a>
             </div>
         </div>
       {%- else -%}
-
-        <div class="cell cell--12 cell--md-6 cell--lg-4">
+      <div class="cell cell--12 cell--md-6 cell--lg-4 border">
+          
           <div class="card card--flat">
             <a href="{{ _article_url }}">
             {%- if _article.cover -%}
@@ -137,10 +138,10 @@
                   <h2 class="card__header">{{ _article.title }}</h2>
                 </header>
               </div>
+            </a>
           </div>
-          </a>
         </div>
-      {%- endif -%}
+        {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
 

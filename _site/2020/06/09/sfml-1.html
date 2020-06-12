@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Making a Game in SFML: Prelude - Reece's Hub</title>
 
 <meta name="description" content="C++. The language which stikes fear into the very heart of CS students. In the age of Python and JavaScript it is mearly a fable told to scare us surely? Poi...">
-<link rel="canonical" href="http://localhost:4000/2020/06/09/sfml-1.html"><link rel="alternate" type="application/rss+xml" title="Reece's Hub" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="canonical" href="http://localhost:4000/2020/06/09/sfml-1.html"><link rel="alternate" type="application/rss+xml" title="Reece's Hub" href="/feed.xml"><link rel="shortcut icon" type="image/png" href="/favicon.png?">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -258,15 +258,8 @@
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
-        <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24">
-<style type="text/css">
-	.st0{fill:#515151;}
-</style>
-<path class="st0" d="M1.7,22.3c5.7-5.7,11.3-5.7,17,0c3.3-3.3,3.5-5.3,0.8-6c2.7,0.7,3.5-1.1,2.3-5.6s-3.3-5.2-6.3-2.1
-	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"/>
-</svg>
-<a title="It has all my stuff!
+        <div class="header__brand">
+          <img src="/favicon.png" class="mx-2" /><a title="It has all my stuff!
 " href="/">Reece's Hub</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
         <ul><li class="navigation__item"><a href="/blog/">Blog</a></li><li class="navigation__item"><a href="/portfolio/">Portfolio</a></li><li class="navigation__item"><a href="/archive.html">Archive</a></li><li class="navigation__item"><a href="/about/">About</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
@@ -295,6 +288,7 @@
 <!--more-->
 
 <div class="panel seriesNote">
+  <h5 style="margin-top: 5px;margin-bottom: 5px;">Series - Making a Game in SFML</h5>
   <ul>
     
     
@@ -302,7 +296,7 @@
     
 
     
-    <li><b>Making a Game in SFML:</b> <i>Prelude</i></li>
+    <li><b>Part 1: Prelude</b></li>
     
     
     
@@ -310,7 +304,15 @@
     
 
     
-    <li><b>Making a Game in SFML:</b> <a href="/2020/06/10/sfml-2.html">Basics</a></li>
+    <li><a href="/2020/06/10/sfml-2.html"><b>Part 2: Basics</b></a></li>
+    
+    
+    
+    
+    
+
+    
+    <li><a href="/2020/06/12/sfml-3.html"><b>Part 3: TODO</b></a></li>
     
     
     
@@ -336,19 +338,19 @@
 
   .panel li {
     list-style-type: none;
-    padding-top: 6px;
     padding-bottom: 6px;
   }
   .panel li:not(:first-child) {
     border-top: 1px solid #cbcbcb;
+    padding-top: 6px;
   }
 </style>
 
 <p>Over the past few weeks I’ve been looking into getting my head around C++ - the idea of speed and power have always sounded very exciting and other languages just weren’t doing it for me. Compiling to a binary also means when you want to share your new exciting project with a friend you just need to send them a single zip file, rather than an instruction list of which Python packages to install for example.</p>
 
-<p>One of the most popular C++ game engines/libaries is <strong>S</strong>uper <strong>F</strong>ast <strong>M</strong>edia <strong>L</strong>ibrary (<strong>SFML</strong>) - I won’t be covering how to install SFML here, as there are hundreds of ways to do it per system <em>and hundreds of people who will say I’m showing you the wrong way anyway.</em></p>
+<p>One of the most popular C++ game engines/libaries is <strong>S</strong>imple <strong>F</strong>ast <strong>M</strong>edia <strong>L</strong>ibrary (<strong>SFML</strong>) - I won’t be covering how to install SFML here, as there are hundreds of ways to do it per system <em>and hundreds of people who will say I’m showing you the wrong way anyway.</em></p>
 
-<p>So, to get started in my game development process I wanted a simple starting point - the <code class="language-plaintext highlighter-rouge">Hello World!</code> equivalent in game development <a href="https://www.ponggame.org/pong-no-flash.php">Pong</a> is a classic arcade game with a painfully simple concept: hit the ball. Since my future goals would involve a complicated project I wanted to get the basics down first; this included player controls, rendering, and networking.</p>
+<p>So, to get started in my game development process I wanted a simple starting point - the <code class="language-plaintext highlighter-rouge">Hello World!</code> equivalent in game development. <a href="https://www.ponggame.org/pong-no-flash.php">Pong</a>. The classic arcade game with a painfully simple concept, hit the ball. Since my future goals would involve a complicated project I wanted to get the basics down first; this included player controls, rendering, and networking.</p>
 
 <p>I decided to make a simple ‘starter’ template which I could then bolster for future use.</p>
 

@@ -2761,6 +2761,8 @@ body, html, .root, .layout--page { height: 100%; }
 .layout--404 .sign p { font-size: 1.8rem; }
 
 /* start custom scss snippet */
+.border { border: 1px solid #ccc; border-radius: 4px; }
+
 /* end custom scss snippet */
 
 /*# sourceMappingURL=main.css.map */

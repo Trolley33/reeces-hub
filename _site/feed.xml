@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-06-11T23:51:05+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Reece’s Hub</title><subtitle>It has all my stuff!
-</subtitle><author><name>reece Trolley</name><email>reecetrolley@gmail.com</email></author><entry><title type="html">Making a Game in SFML: Basics</title><link href="http://localhost:4000/2020/06/10/sfml-2.html" rel="alternate" type="text/html" title="Making a Game in SFML: Basics" /><published>2020-06-10T00:00:00+00:00</published><updated>2020-06-10T00:00:00+00:00</updated><id>http://localhost:4000/2020/06/10/sfml-2</id><content type="html" xml:base="http://localhost:4000/2020/06/10/sfml-2.html">&lt;div class=&quot;panel seriesNote&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-06-12T01:33:31+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Reece’s Hub</title><subtitle>It has all my stuff!
+</subtitle><author><name>reece Trolley</name><email>reecetrolley@gmail.com</email></author><entry><title type="html">Making a Game in SFML: TODO</title><link href="http://localhost:4000/2020/06/12/sfml-3.html" rel="alternate" type="text/html" title="Making a Game in SFML: TODO" /><published>2020-06-12T00:00:00+00:00</published><updated>2020-06-12T00:00:00+00:00</updated><id>http://localhost:4000/2020/06/12/sfml-3</id><content type="html" xml:base="http://localhost:4000/2020/06/12/sfml-3.html">&lt;div class=&quot;panel seriesNote&quot;&gt;
+  &lt;h5 style=&quot;margin-top: 5px;margin-bottom: 5px;&quot;&gt;Series - Making a Game in SFML&lt;/h5&gt;
   &lt;ul&gt;
     
     
@@ -7,7 +8,7 @@
     
 
     
-    &lt;li&gt;&lt;b&gt;Making a Game in SFML:&lt;/b&gt; &lt;a href=&quot;/2020/06/09/sfml-1.html&quot;&gt;Prelude&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/2020/06/09/sfml-1.html&quot;&gt;&lt;b&gt;Part 1: Prelude&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;
     
     
     
@@ -15,7 +16,15 @@
     
 
     
-    &lt;li&gt;&lt;b&gt;Making a Game in SFML:&lt;/b&gt; &lt;i&gt;Basics&lt;/i&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/2020/06/10/sfml-2.html&quot;&gt;&lt;b&gt;Part 2: Basics&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;
+    
+    
+    
+    
+    
+
+    
+    &lt;li&gt;&lt;b&gt;Part 3: TODO&lt;/b&gt;&lt;/li&gt;
     
     
     
@@ -41,20 +50,85 @@
 
   .panel li {
     list-style-type: none;
-    padding-top: 6px;
     padding-bottom: 6px;
   }
   .panel li:not(:first-child) {
     border-top: 1px solid #cbcbcb;
+    padding-top: 6px;
+  }
+&lt;/style&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// TODO: THIS ARTICLE!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;!--more--&gt;</content><author><name>reece Trolley</name><email>reecetrolley@gmail.com</email></author><category term="c++" /><category term="sfml" /><summary type="html">Series - Making a Game in SFML Part 1: Prelude Part 2: Basics Part 3: TODO // TODO: THIS ARTICLE!</summary></entry><entry><title type="html">Making a Game in SFML: Basics</title><link href="http://localhost:4000/2020/06/10/sfml-2.html" rel="alternate" type="text/html" title="Making a Game in SFML: Basics" /><published>2020-06-10T00:00:00+00:00</published><updated>2020-06-10T00:00:00+00:00</updated><id>http://localhost:4000/2020/06/10/sfml-2</id><content type="html" xml:base="http://localhost:4000/2020/06/10/sfml-2.html">&lt;div class=&quot;panel seriesNote&quot;&gt;
+  &lt;h5 style=&quot;margin-top: 5px;margin-bottom: 5px;&quot;&gt;Series - Making a Game in SFML&lt;/h5&gt;
+  &lt;ul&gt;
+    
+    
+    
+    
+
+    
+    &lt;li&gt;&lt;a href=&quot;/2020/06/09/sfml-1.html&quot;&gt;&lt;b&gt;Part 1: Prelude&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;
+    
+    
+    
+    
+    
+
+    
+    &lt;li&gt;&lt;b&gt;Part 2: Basics&lt;/b&gt;&lt;/li&gt;
+    
+    
+    
+    
+    
+
+    
+    &lt;li&gt;&lt;a href=&quot;/2020/06/12/sfml-3.html&quot;&gt;&lt;b&gt;Part 3: TODO&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;
+    
+    
+    
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .panel {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05)
+  }
+
+  .panel ul {
+    margin-left: 0;
+  }
+
+  .panel li {
+    list-style-type: none;
+    padding-bottom: 6px;
+  }
+  .panel li:not(:first-child) {
+    border-top: 1px solid #cbcbcb;
+    padding-top: 6px;
   }
 &lt;/style&gt;
 
 &lt;p&gt;Last time we worked on getting a simple SFML window to popup, a completely blank canvas for us to begin our work on - &lt;em&gt;perfect&lt;/em&gt;.
-&lt;!--more--&gt;&lt;/p&gt;</content><author><name>reece Trolley</name><email>reecetrolley@gmail.com</email></author><category term="c++" /><category term="sfml" /><summary type="html">Making a Game in SFML: Prelude Making a Game in SFML: Basics Last time we worked on getting a simple SFML window to popup, a completely blank canvas for us to begin our work on - perfect.</summary></entry><entry><title type="html">Making a Game in SFML: Prelude</title><link href="http://localhost:4000/2020/06/09/sfml-1.html" rel="alternate" type="text/html" title="Making a Game in SFML: Prelude" /><published>2020-06-09T00:00:00+00:00</published><updated>2020-06-09T00:00:00+00:00</updated><id>http://localhost:4000/2020/06/09/sfml-1</id><content type="html" xml:base="http://localhost:4000/2020/06/09/sfml-1.html">&lt;p&gt;C++. The language which stikes fear into the very heart of CS students. In the age of Python and JavaScript it is mearly a fable told to scare us surely? Pointers. Segmentation faults. Manually installing libraries. The stories can’t be true - &lt;strong&gt;can they?&lt;/strong&gt;&lt;/p&gt;
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// TODO: THIS ARTICLE!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>reece Trolley</name><email>reecetrolley@gmail.com</email></author><category term="c++" /><category term="sfml" /><summary type="html">Series - Making a Game in SFML Part 1: Prelude Part 2: Basics Part 3: TODO Last time we worked on getting a simple SFML window to popup, a completely blank canvas for us to begin our work on - perfect.</summary></entry><entry><title type="html">Making a Game in SFML: Prelude</title><link href="http://localhost:4000/2020/06/09/sfml-1.html" rel="alternate" type="text/html" title="Making a Game in SFML: Prelude" /><published>2020-06-09T00:00:00+00:00</published><updated>2020-06-09T00:00:00+00:00</updated><id>http://localhost:4000/2020/06/09/sfml-1</id><content type="html" xml:base="http://localhost:4000/2020/06/09/sfml-1.html">&lt;p&gt;C++. The language which stikes fear into the very heart of CS students. In the age of Python and JavaScript it is mearly a fable told to scare us surely? Pointers. Segmentation faults. Manually installing libraries. The stories can’t be true - &lt;strong&gt;can they?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
 &lt;div class=&quot;panel seriesNote&quot;&gt;
+  &lt;h5 style=&quot;margin-top: 5px;margin-bottom: 5px;&quot;&gt;Series - Making a Game in SFML&lt;/h5&gt;
   &lt;ul&gt;
     
     
@@ -62,7 +136,7 @@
     
 
     
-    &lt;li&gt;&lt;b&gt;Making a Game in SFML:&lt;/b&gt; &lt;i&gt;Prelude&lt;/i&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Part 1: Prelude&lt;/b&gt;&lt;/li&gt;
     
     
     
@@ -70,7 +144,15 @@
     
 
     
-    &lt;li&gt;&lt;b&gt;Making a Game in SFML:&lt;/b&gt; &lt;a href=&quot;/2020/06/10/sfml-2.html&quot;&gt;Basics&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/2020/06/10/sfml-2.html&quot;&gt;&lt;b&gt;Part 2: Basics&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;
+    
+    
+    
+    
+    
+
+    
+    &lt;li&gt;&lt;a href=&quot;/2020/06/12/sfml-3.html&quot;&gt;&lt;b&gt;Part 3: TODO&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;
     
     
     
@@ -96,19 +178,19 @@
 
   .panel li {
     list-style-type: none;
-    padding-top: 6px;
     padding-bottom: 6px;
   }
   .panel li:not(:first-child) {
     border-top: 1px solid #cbcbcb;
+    padding-top: 6px;
   }
 &lt;/style&gt;
 
 &lt;p&gt;Over the past few weeks I’ve been looking into getting my head around C++ - the idea of speed and power have always sounded very exciting and other languages just weren’t doing it for me. Compiling to a binary also means when you want to share your new exciting project with a friend you just need to send them a single zip file, rather than an instruction list of which Python packages to install for example.&lt;/p&gt;
 
-&lt;p&gt;One of the most popular C++ game engines/libaries is &lt;strong&gt;S&lt;/strong&gt;uper &lt;strong&gt;F&lt;/strong&gt;ast &lt;strong&gt;M&lt;/strong&gt;edia &lt;strong&gt;L&lt;/strong&gt;ibrary (&lt;strong&gt;SFML&lt;/strong&gt;) - I won’t be covering how to install SFML here, as there are hundreds of ways to do it per system &lt;em&gt;and hundreds of people who will say I’m showing you the wrong way anyway.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;One of the most popular C++ game engines/libaries is &lt;strong&gt;S&lt;/strong&gt;imple &lt;strong&gt;F&lt;/strong&gt;ast &lt;strong&gt;M&lt;/strong&gt;edia &lt;strong&gt;L&lt;/strong&gt;ibrary (&lt;strong&gt;SFML&lt;/strong&gt;) - I won’t be covering how to install SFML here, as there are hundreds of ways to do it per system &lt;em&gt;and hundreds of people who will say I’m showing you the wrong way anyway.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;So, to get started in my game development process I wanted a simple starting point - the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hello World!&lt;/code&gt; equivalent in game development &lt;a href=&quot;https://www.ponggame.org/pong-no-flash.php&quot;&gt;Pong&lt;/a&gt; is a classic arcade game with a painfully simple concept: hit the ball. Since my future goals would involve a complicated project I wanted to get the basics down first; this included player controls, rendering, and networking.&lt;/p&gt;
+&lt;p&gt;So, to get started in my game development process I wanted a simple starting point - the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hello World!&lt;/code&gt; equivalent in game development. &lt;a href=&quot;https://www.ponggame.org/pong-no-flash.php&quot;&gt;Pong&lt;/a&gt;. The classic arcade game with a painfully simple concept, hit the ball. Since my future goals would involve a complicated project I wanted to get the basics down first; this included player controls, rendering, and networking.&lt;/p&gt;
 
 &lt;p&gt;I decided to make a simple ‘starter’ template which I could then bolster for future use.&lt;/p&gt;
 

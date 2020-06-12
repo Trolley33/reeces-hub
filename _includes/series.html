@@ -12,6 +12,7 @@
 {% endfor %}
 
 <div class="panel seriesNote">
+  <h5 style="margin-top: 5px;margin-bottom: 5px;">Series - {{page.series}}</h5>
   <ul>
     {% assign count = '0' %}
     {% for post in site.posts reversed %}
@@ -19,9 +20,9 @@
     {% capture count %}{{ count | plus: '1' }}{% endcapture %}
 
     {% if page.url == post.url %}
-    <li><b>{{post.series}}:</b> <i>{{post.subtitle}}</i></li>
+    <li><b>Part {{count}}: {{post.subtitle}}</b></li>
     {% else %}
-    <li><b>{{post.series}}:</b> <a href="{{post.url}}">{{post.subtitle}}</a></li>
+    <li><a href="{{post.url}}"><b>Part {{count}}: {{post.subtitle}}</b></a></li>
     {% endif %}
     {% endif %}
     {% endfor %}
@@ -48,10 +49,10 @@
 
   .panel li {
     list-style-type: none;
-    padding-top: 6px;
     padding-bottom: 6px;
   }
   .panel li:not(:first-child) {
     border-top: 1px solid #cbcbcb;
+    padding-top: 6px;
   }
 </style>
