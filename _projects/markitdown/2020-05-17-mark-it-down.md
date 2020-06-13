@@ -33,4 +33,4 @@ Using TailWind was the first time _I_ felt like I was doing the designing, and h
 Have a suggestion/bug?
 
 ### Pre-built Binary Downloads
-- [Win-x64](/projects/download/winx64-markitdown.zip)
+- [Win-x64](/projects/markitdown/downloads/winx64-markitdown.zip)
