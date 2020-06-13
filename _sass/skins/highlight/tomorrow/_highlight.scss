@@ -5,6 +5,7 @@ figure.highlight::before {
 pre.lineno {
   color: $highlight-comment !important;
 }
+
 .highlight > pre {
   color: $highlight-foreground;
   background-color: $highlight-background !important;
@@ -31,7 +32,7 @@ pre.lineno {
   .kn  { color: $highlight-aqua; } /* Keyword.Namespace */
   .kp  { color: $highlight-purple; } /* Keyword.Pseudo */
   .kr  { color: $highlight-purple; } /* Keyword.Reserved */
-  .kt  { color: $highlight-yellow; } /* Keyword.Type */
+  .kt  { color: $highlight-purple; } /* Keyword.Type */
   .ld  { color: $highlight-green; } /* Literal.Date */
   .m   { color: $highlight-orange; } /* Literal.Number */
   .s   { color: $highlight-green; } /* Literal.String */
@@ -43,7 +44,7 @@ pre.lineno {
   .ni  { color: $highlight-foreground; } /* Name.Entity */
   .ne  { color: $highlight-red; } /* Name.Exception */
   .nf  { color: $highlight-blue; } /* Name.Function */
-  .nl  { color: $highlight-foreground; } /* Name.Label */
+  .nl  { color: $highlight-blue; } /* Name.Label */
   .nn  { color: $highlight-yellow; } /* Name.Namespace */
   .nx  { color: $highlight-blue; } /* Name.Other */
   .py  { color: $highlight-foreground; } /* Name.Property */
