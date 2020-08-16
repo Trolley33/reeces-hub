@@ -41,7 +41,7 @@ All modules below were studied at the University of Loughborough under the Compu
   <tr>
     <td>2019</td>
     <td>
-      <a href="https://github.com/Trolley33/AI-DepthFirst-Jug">
+      <a target="_blank" href="https://github.com/Trolley33/AI-DepthFirst-Jug">
       AI Methods
       </a>
     </td>
@@ -60,7 +60,7 @@ All modules below were studied at the University of Loughborough under the Compu
   <tr>
     <td>2019</td>
     <td>
-      <a href="/projects/recipe-storer/2019-05-06-recipe-storer.html">
+      <a target="_blank" href="/projects/recipe-storer/2019-05-06-recipe-storer.html">
       Mobile App Development
       </a>
     </td>
@@ -74,7 +74,7 @@ All modules below were studied at the University of Loughborough under the Compu
   <tr>
     <td>2019</td>
     <td>
-      <a href="https://github.com/Trolley33/team-projects-part-2">
+      <a target="_blank" href="https://github.com/Trolley33/team-projects-part-2">
       Team Projects
       </a>
     </td>
